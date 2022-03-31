@@ -11,8 +11,11 @@ const Home = () => {
 
   return (
     <div>
-      <div className="bg-green-700 py-10 text-white">
-        <h1 className="text-4xl font-bold mb-5">Welcome to Sulayman Dine</h1>
+      <div className="bg-green-700 py-5 text-white">
+        <h1 className="text-4xl font-bold mb-5">
+          <span className="text-2xl ">Welcome to</span> <br />{" "}
+          <span>Sulayman Dine</span>
+        </h1>
       </div>
 
       <div className="m-10">

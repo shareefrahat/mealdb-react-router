@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import Shop from "../Shop/Shop";
 
@@ -20,8 +21,11 @@ const Restaurant = () => {
 
   return (
     <div>
-      <div className="bg-green-700 py-10 text-white">
-        <h1 className="text-4xl font-bold mb-5">Your Favourite Restaurant</h1>
+      <div className="bg-green-700 py-5 text-white">
+        <h1 className="text-4xl font-bold mb-5">
+          Restaurant <br />
+          <span className="text-2xl">Search your favourite meal</span>
+        </h1>
         <div>
           <input
             onChange={searchFood}
@@ -48,12 +52,13 @@ const Restaurant = () => {
               !searchText ? (
                 ""
               ) : (
-                <p
+                <Link
+                  to={"/meal/" + meal.idMeal}
                   key={meal.idMeal}
-                  className="px-10 hover:bg-green-800 hover:text-white"
+                  className="block px-10 hover:bg-green-800 hover:text-white"
                 >
                   {meal.strMeal}
-                </p>
+                </Link>
               )
             )}
           </div>
